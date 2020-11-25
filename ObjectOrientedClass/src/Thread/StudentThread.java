@@ -4,7 +4,7 @@ public class StudentThread extends Thread {
     private SharedBoard board;
 
     public StudentThread(String name, SharedBoard board) {
-        super(name);
+        super(name); //스레드 이름 지정
         this.board = board;
     }
 

@@ -6,8 +6,13 @@ public class SharedBoard {
 
     synchronized public void add() {
         n = sum;
+        Thread.yield();
         n += 10;
         sum = n;
         System.out.println(Thread.currentThread().getName() + sum);
+    }
+
+    public int getSum() {
+        return sum;
     }
 }
